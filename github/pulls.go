@@ -72,6 +72,11 @@ type PullRequestListOptions struct {
 
 	// Base filters pull requests by base branch name.
 	Base string `url:"base,omitempty"`
+	
+	// What to sort results by. Can be either created, updated, popularity
+	// (comment count) or long-running (age, filtering by pulls updated in
+	// the last month). Default: created
+	Sort string `url:"sort,omitempty"`
 
 	ListOptions
 }
